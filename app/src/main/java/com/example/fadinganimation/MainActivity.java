@@ -20,18 +20,18 @@ public class MainActivity extends AppCompatActivity {
         ezioImage = (ImageView) findViewById(R.id.imageViewEzio);
 
         selectedImage = 1;
-        ezioImage.animate().alpha(0);
+        ezioImage.animate().alpha(0).setDuration(0);
     }
 
     public void imageClicked(View v) {
         if(1 == selectedImage) {
             selectedImage = 2;
             logoImage.animate().alpha(0).setDuration(2000);
-            ezioImage.animate().alpha(1).setDuration(2000);
+            ezioImage.animate().alpha(1).setDuration(3000);
         } else {
             selectedImage = 1;
             ezioImage.animate().alpha(0).setDuration(2000);
-            logoImage.animate().alpha(1).setDuration(2000);
+            logoImage.animate().alpha(1).setDuration(3000);
         }
     }
 }
