@@ -9,6 +9,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     ImageView logoImage;
     ImageView ezioImage;
+    int selectedImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
         logoImage = (ImageView) findViewById(R.id.imageViewLogo);
         ezioImage = (ImageView) findViewById(R.id.imageViewEzio);
+
+        selectedImage = 1;
+        ezioImage.animate().alpha(0);
     }
 
     public void imageClicked(View v) {
-
+        
     }
 }
